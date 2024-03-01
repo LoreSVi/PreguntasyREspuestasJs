@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia Game</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+</head>
+<body>
+    <div id="container">
+        <h1>Trivia Game</h1>
+        <div id="question-container">
+          <p id="question-text">¿Pregunta?</p>
+        </div>
+        <div id="answers-container">
+          <button class="answer-btn" onclick="checkAnswer(0)">Opción 1</button>
+          <button class="answer-btn" onclick="checkAnswer(1)">Opción 2</button>
+          <button class="answer-btn" onclick="checkAnswer(2)">Opción 3</button>
+          <button class="answer-btn" onclick="checkAnswer(3)">Opción 4</button>
+        </div>
+        <div id="score-container">
+          <p id="current-score">Puntaje actual: 0</p>
+        </div>
+        <button id="next-btn" onclick="nextQuestion()" disabled>Siguiente Pregunta</button>
+        <div id="result-container">
+          <p id="result-text"></p>
+        </div>
+        <button id="retry-btn" onclick="retryGame()">Reintentar Juego</button>
+      </div>
+      
+</body>
+</html>
