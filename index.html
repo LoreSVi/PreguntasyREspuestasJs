@@ -4,30 +4,101 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trivia Game</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
+   <!-- animate -->
+   <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+ >
   <script defer src="main.js"></script>
 </head>
 <body>
-    <div id="container">
-        <h1>Trivia Game</h1>
-        <div id="question-container">
-          <p id="question-text">¿Pregunta?</p>
+     <!-- titulo animado -->
+        <div class="animacTit">
+          <h1 class="animate__animated animate__bounce" id="titulo-animado">EMPECEMOS!!</h1>
         </div>
-        <div id="answers-container">
-          <button class="answer-btn" onclick="checkAnswer(0)">Opción 1</button>
-          <button class="answer-btn" onclick="checkAnswer(1)">Opción 2</button>
-          <button class="answer-btn" onclick="checkAnswer(2)">Opción 3</button>
-          <button class="answer-btn" onclick="checkAnswer(3)">Opción 4</button>
+  <div id="inicio" class="box">
+
+    <h2>TRIVIA</h2>
+A
+    <p>
+        ¿Cuál es tu nombre?
+    </p>
+    <p>
+        <input type="text" id="txtNombre" class="textbox" placeholder="Ingresa tu nombre">
+    </p>
+    <p>
+        <button class="btn blue" onclick="validarNombre()" >ENTRAR</button>
+    </p>
+
+
+</div>
+
+<div id="categoria" class="box oculto">
+
+    <h2 id="msgHola"></h2>
+
+    <h3>Selecciona una categoría:</h3>
+    
+    <p>
+        <button class="btn blue" onclick="cargarPreguntasTipo('A')" >SERIES</button>
+    </p>
+
+    <p>
+        <button class="btn blue" onclick="cargarPreguntasTipo('B')" >GEOGRAFÍA</button>
+    </p>
+</div>
+
+<div id="jugar" class="box oculto">
+
+    <div id="timer"></div>
+
+    <h2 id="msgCategoria"></h2>
+
+    <div class="preguntas">
+
+        <h3 id="pregunta"></h3>
+        <p>
+            <div id="alternativas">
+
+            </div>
+        </p>
+        <div id="divrpta" class="oculto"> 
         </div>
-        <div id="score-container">
-          <p id="current-score">Puntaje actual: 0</p>
-        </div>
-        <button id="next-btn" onclick="nextQuestion()" disabled>Siguiente Pregunta</button>
-        <div id="result-container">
-          <p id="result-text"></p>
-        </div>
-        <button id="retry-btn" onclick="retryGame()">Reintentar Juego</button>
-      </div>
+         
+        <p>
+            <button class="btn blue" onclick="siguiente()" >NEXT > </button>
+        </p>
+
+    </div>
+
+</div>
+
+<div id="resultados" class="box oculto">
+
+    <h2>RESULTADOS</h2>
+    <br>
+    <div id="divresultado">
+        
+    </div>
+
+     
+
+    <h3 class="separador" >Jugar Nuevamente</h3>
+    
+    <p>
+        <button class="btn blue" onclick="cargarPreguntasTipo('A')" >SERIES</button>
+        &nbsp;&nbsp;
+        <button class="btn blue" onclick="cargarPreguntasTipo('B')" >GEOGRAFÍA</button>
+        &nbsp;&nbsp;
+        <button class="btn blue" onclick="cerrarSesion()" >CERRAR SESIÓN</button>
+    </p>
+
+
+    
+</div>
+
+
       
 </body>
 </html>
